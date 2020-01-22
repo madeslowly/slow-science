@@ -1,0 +1,54 @@
+<!-- *** STRUCTURED DATA *** -->
+<!-- WebSite -->
+<!-- const -->
+<script type="application/ld+json">
+{ "@context":"https://schema.org",
+  "@graph":[ {
+    "@type":"WebSite",
+    "@id":"{{ site.url }}{{ site.baseurl }}/#website",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "sameAs":[
+      "mailto:{{ site.email }}"],
+    "name": "{{ site.title }} | {{ site.subtitle }}",
+    "description": "{{ site.description }}",
+    "image": "{{ site.url }}{{ site.baseurl }}/assets/img/page-thumbs/{{ site.thumbnail }}",
+    "author":[ {
+      /* Person */
+      "@type": "Person",
+      "@context": "http://schema.org",
+      "name": "{{ site.author.name }}",
+      "description": "{{ site.author.description }}",
+      "image": "{{ site.url }}{{ site.baseurl }}/assets/img/page-thumbs/{{ site.author.thumbnail }}"} ]
+     } , {
+    /* WePage */
+    /* var */
+    "@type":"WebPage",
+    "@id":"{{ site.url }}{{ site.baseurl }}{{ page.url }}#webpage",
+    "url":"{{ site.url }}{{ site.baseurl }}{{ page.url }}",
+    "inLanguage":"en-GB",
+    "name":"{% if page.url == '/' %} {{ site.title }} | {{ site.subtitle }} {% else %} {{ page.title }} | {{ site.title }} {% endif %}",
+    "description": "{% if page.url == '/' %} {{ site.descrition }}{% else %}{{ page.description }}{% endif %}",
+    "datePublished":"{{ page.date }}",
+    "dateModified":"{{ 'now' | date_to_xmlschema }}",
+    "isPartOf":[{
+      "@id":"{{ site.url }}{{ site.baseurl }}/#website"}] }] } </script>
+
+<!-- Organization -->
+<script type="application/ld+json">
+{ "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "legalName": "{{ site.postal_add.university }}",
+  "description": "{{ site.description }}",
+  "image": "{{ site.url }}{{ site.baseurl }}/assets/img/page-thumbs/{{ site.thumbnail }}",
+  "logo": "{{ site.url }}{{ site.baseurl }}/{{ site.logo }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.postal_add.street }}",
+    "addressLocality": "{{ site.postal_add.city }}",
+    "addressRegion": "{{ site.postal_add.region }}",
+    "addressCountry": "{{ site.postal_add.country }}",
+    "postalCode": "{{ site.postal_add.postcode }}" },
+  "telephone": "{{ site.phone }}",
+  "sameAs": [
+    "mailto:{{ site.email }}"] } </script>

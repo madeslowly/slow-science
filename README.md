@@ -33,15 +33,26 @@ Or install it yourself as:
 
 Front matter options:
 
-lang: "page language"
-
-If `page:lang` = null, defaults to site language if declared in _config.yml, if site:lang = null, defulats to "en".
+```yaml
+lang: "page language-page country"
+```
+If `page.lang` is null, defaults to site language if declared in `_config.yml`, if `site.lang` = null, defulats to `"en-GB"`
 
 See [list](https://www.w3schools.com/tags/ref_language_codes.asp) of languages.
 
+## `_config.yml` options
+
+
+```yaml
+research:
+  intro : Long intro to your research. Not displayed on mobile devices.
+  detail: Details of your research. Displays on all devices.
+```
+
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/madeslowly/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
