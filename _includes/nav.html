@@ -1,0 +1,23 @@
+<nav>
+  <div class="nav-brand">
+    <a href="{{ site.baseurl }}/" >
+      {% include hs-logo.html %}
+    </a>
+  </div>
+  <ul class="nav-links">
+    {% for item in site.data.menu %} {% if item.menu == 1 %}
+    <li>
+      <a href="{{ site.baseurl }}{{ item.link }}">
+      {{ item.name | upcase }}
+      </a>
+    </li>
+
+    {% endif %} {% endfor %}
+    
+  </ul>
+  <div class="burger">
+    <div class="burger-line-1"></div>
+    <div class="burger-line-2"></div>
+    <div class="burger-line-3"></div>
+  </div>
+</nav>

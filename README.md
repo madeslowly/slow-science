@@ -44,7 +44,7 @@ layout: home
 ### Front matter options:
 
 ```yaml
-lang: "page language-page country"
+lang: "language-country"
 ```
 If `page.lang` is null, defaults to site language if declared in `_config.yml`, if `site.lang` = null, defulats to `"en-GB"`
 
@@ -67,6 +67,18 @@ research:
 
 ## Site Data
 
+### Menus
+
+`_data/menu.yml`
+
+```yaml
+- name:      Research
+  link:      /#research
+  menu:      1/2
+```
+
+Primary menu is placed the main navbar. Secondary menu items are included along side the primary items in the footer.
+
 ### Team members
 
 `_data/team.yml`
@@ -82,7 +94,6 @@ research:
       url: mailto:arran@madeslowly.co.uk
     - icon: fas fa-link
       url: https://www.madeslowly.co.uk
-
 ```
 
 ## Contributing
