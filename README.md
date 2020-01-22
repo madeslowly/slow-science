@@ -31,7 +31,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+Front matter options:
+
+lang: "page language"
+
+If `page:lang` = null, defaults to site language if declared in _config.yml, if site:lang = null, defulats to "en".
+
+See [list](https://www.w3schools.com/tags/ref_language_codes.asp) of languages.
 
 ## Contributing
 
@@ -49,4 +55,3 @@ To add a custom directory to your theme-gem, please edit the regexp in `slow-sci
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
