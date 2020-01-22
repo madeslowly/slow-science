@@ -1,24 +1,16 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en-GB" }}">
   {%- include head.html -%}
 
   <body>
 
-    {%- include masthead.html -%}
+    {%- include nav.html -%}
 
-    <a name="research"></a>
-    {% include research.html %}
-
-    <section class="spacer"></section>
-
-    <a name="publications"></a>
-    {% include featured-publications.html %}
-
-    <section class="spacer"></section>
-
-    <a name="team"></a>
-    {% include team.html %}
-
+    {{ content }}
 
     {%- include footer.html -%}
 

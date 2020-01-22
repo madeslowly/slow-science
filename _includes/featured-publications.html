@@ -1,0 +1,24 @@
+<!-- publications  -->
+<section class="global-container publications-wraper">
+
+  <h1 class="center-header publications-header">Selected Publications</h1>
+
+  <img class="publications-header-img" src="{{ site.baseurl }}/assets/img/publications/publications-header.jpg" alt="">
+
+  <div class="publications-panel">
+    {% for post in site.posts | limit: 3 %}
+    {% if post.feature == true %}
+
+    {% include publication-item.html %}
+
+    {% endif %}
+    {% endfor %}
+
+  </div>
+</section>
+
+<section class="publications-wraper">
+  <a class="publication-link" href="{{ site.baseurl }}/publications/">
+  <h2 class="">More <i class="fas fa-arrow-circle-right"></i></h2>
+  </a>
+</section>

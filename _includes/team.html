@@ -1,0 +1,23 @@
+<!-- Team Section -->
+<section class="global-container team-container">
+  <h1 class="center-header">Our Team</h1>
+  <div class="team-panel">
+    {% for item in site.data.team %}
+    <div class="team-member" data-aos="fade-in">
+      <img src="{{ site.baseurl }}/assets/img/team/{{ item.pic }}.jpg" class="team-member-img" alt="">
+      <h3 class="team-name">{{ item.name }}</h3>
+      <p class="team-position">{{ item.position }}</p>
+      <ul class="team-contacts">
+        {% for network in item.social %}
+        <li>
+          <a href="{{ network.url }}">
+            <i class="{{ network.icon }} fa-2x"></i>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+
+</section>

@@ -31,7 +31,17 @@ Or install it yourself as:
 
 ## Usage
 
-Front matter options:
+## Homepage
+
+Create a file called index.html with the following front matter
+
+```yaml
+---
+layout: home
+---
+```
+
+### Front matter options:
 
 ```yaml
 lang: "page language-page country"
@@ -39,6 +49,11 @@ lang: "page language-page country"
 If `page.lang` is null, defaults to site language if declared in `_config.yml`, if `site.lang` = null, defulats to `"en-GB"`
 
 See [list](https://www.w3schools.com/tags/ref_language_codes.asp) of languages.
+
+```yaml
+feature: true
+```
+Use in publication front matter to display the on the featured list on the home page. Limited to 3.
 
 ## `_config.yml` options
 
@@ -49,6 +64,26 @@ research:
   detail: Details of your research. Displays on all devices.
 ```
 
+
+## Site Data
+
+### Team members
+
+`_data/team.yml`
+
+```yaml
+- name: Made Slowly
+  pic: name of image file without extension
+  position:
+  social:
+    - icon: fab fa-twitter
+      url: https://twitter.com/made_slowly
+    - icon: far fa-envelope
+      url: mailto:arran@madeslowly.co.uk
+    - icon: fas fa-link
+      url: https://www.madeslowly.co.uk
+
+```
 
 ## Contributing
 
