@@ -1,0 +1,58 @@
+.team-container
+  background-color: rgb(197, 199, 210)
+
+.team-panel
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.team-member
+  margin: 5vh auto
+  width: 300px
+
+.team-member-img
+  border: solid 1px $soft-black
+  border-radius: 10px
+  display: block
+  width: 100%
+
+.team-name
+  color: $soft-black
+  text-align: center
+
+.team-position
+  text-align: center
+
+.team-contacts
+  color: $soft-black
+  padding: 0
+  text-align: center
+
+  li
+    display: inline
+
+@media screen and ( min-width: 768px )
+
+  .team-member
+
+    &:hover
+      .team-member-img
+        box-shadow: 0 6px 16px rgba(0, 0, 0, .3)
+
+      .team-name
+        color: $black
+
+  .team-name
+    transition: color .3s ease-in-out
+
+  .team-member-img
+    border-radius: 100px
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0)
+    margin: 0 auto
+    transition: box-shadow .4s ease-in-out
+    width: 50%
+
+  .team-contacts a
+
+    &:hover
+      color: $black

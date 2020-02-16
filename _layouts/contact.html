@@ -1,0 +1,59 @@
+---
+layout: default
+title: Get in touch
+permalink: /contact/
+---
+
+<section class="contact-masthead">
+  <h1 class="contact-header">Contact Us</h1>
+  <h4 id="typeWriter-container" class="contact-strap"></h4>
+</section>
+
+<div class="contact-wrapper global-container">
+
+  <div class="contact-grid">
+
+    <form class="contact-form" action="{{ site.baseurl}}/assets/php/contact-submission.php" method="post" >
+      <p class="form-instruction">Send us a message using our contact form below.</p>
+
+      <input type="text" class="form-element" name="name" placeholder="Your name" required>
+
+      <input type="text" class="form-element" name="email" placeholder="Your email" required>
+
+      <textarea class="form-element" rows="5" name="message" placeholder="Your message" required></textarea>
+
+      <button class="btn btn-pop btn-outline btn-contact" type="submit">SEND</button>
+
+    </form>
+
+
+    <p class="contact-footer">
+      However you choose to contact us, your information will not be recorded or shared.
+    </p>
+
+
+    <div class="contact-details">
+      <p>Not a form fan? You can contact us directly:</p>
+      <p>
+        <i class="fas fa-envelope"></i> <a href="mailto:{{ site.email }}">{{ site.email }}
+        </a>
+      </p>
+      <p>
+        <i class="fas fa-phone-square"></i> <a href="tel:{{ site.phone }}"‬>{{ site.phone }}</a>
+      </p>
+      <p>
+        <i class="fas fa-map-marked-alt"></i>
+        {{ site.postal_add.street }}<br>
+        {{ site.postal_add.university }}<br>
+        {{ site.postal_add.city }}<br>
+        {{ site.postal_add.country }},
+        {{ site.postal_add.postcode }}
+      </p>
+
+    </div>
+
+  </div>
+</div>
+
+<script async type="text/javascript" src="{{ site.baseurl }}/assets/js/typing-effect.js">
+</script>

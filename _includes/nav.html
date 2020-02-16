@@ -1,11 +1,12 @@
 <nav>
   <div class="nav-brand">
     <a href="{{ site.baseurl }}/" >
-      {% include hs-logo.html %}
+      {{ site.title }}
+
     </a>
   </div>
   <ul class="nav-links">
-    {% for item in site.data.menu %} {% if item.menu == 1 %}
+    {% for item in site.data.menu | limit: 5 %} {% if item.menu == 1 %}
     <li>
       <a href="{{ site.baseurl }}{{ item.link }}">
       {{ item.name | upcase }}
@@ -13,7 +14,7 @@
     </li>
 
     {% endif %} {% endfor %}
-    
+
   </ul>
   <div class="burger">
     <div class="burger-line-1"></div>

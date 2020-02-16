@@ -1,0 +1,118 @@
+footer
+  background-color: $footer-bg
+  box-sizing: border-box
+  color: $white
+  display: grid
+  grid-column-gap: 0
+  grid-row-gap: 10px
+  grid-template-areas: 'footer-funding' 'footer-links-wrapper' 'footer-add' 'footer-base'
+  grid-template-columns: 1fr
+  padding: 5vh 5vw
+
+.footer-funding
+  grid-area: footer-funding
+
+.footer-title
+  text-align: center
+
+.footer-funder-list
+  list-style: none
+  padding: 0
+  text-align: center
+
+.footer-funder-item
+  padding: 20px 0
+
+.footer-funders-img
+  width: 60%
+
+.footer-add
+  grid-area: footer-add
+
+.footer-add-list
+  padding: 0
+
+.footer-add-item
+  list-style: none
+  margin: 0
+  padding: 0
+  text-align: left
+
+  p
+    margin: 0
+
+.footer-links-wrapper
+  grid-area: footer-links-wrapper
+  line-height: 2rem
+  text-align: center
+
+.footer-links-list
+  list-style: none
+  padding: 0
+
+.footer-base
+  border-top: 1px solid rgb(130, 130, 130)
+  display: flex
+  flex-direction: column
+  font-size: $small-font
+  grid-area: footer-base
+  text-align: center
+
+.footer-slogan,
+.footer-copyright
+  margin: 0
+  padding: 0
+
+@media screen and ( min-width: 768px )
+
+  footer
+    grid-template-areas: 'footer-links-wrapper footer-funding' 'footer-add footer-funding' 'footer-base footer-base'
+    grid-template-columns: 60% 40%
+    grid-row-gap: 0
+
+  .footer-title
+    text-align: left
+
+  .footer-funder-list
+    column-count: 1
+    text-align: left
+
+  .footer-funder-item
+    padding: 30px 0
+    width: 25vw
+
+  .footer-base
+    flex-direction: row
+    justify-content: space-between
+
+  .footer-links-wrapper
+    text-align: left
+
+@media screen and ( min-width: 1024px )
+
+  footer
+    grid-template-areas: 'footer-links-wrapper footer-funding' 'footer-add footer-add' 'footer-base footer-base'
+    grid-template-columns: 30% 70%
+
+  .footer-funder-list
+    column-count: 2
+
+  .footer-funder-item
+    width: 15vw
+
+  .footer-funders-img
+    filter: grayscale(1) opacity(.4) contrast(500%)
+    transition: filter .6s ease
+    width: 100%
+
+    &:hover
+      filter: grayscale(0) opacity(1) contrast(100%)
+
+  .footer-links-list
+    transition: .3s ease-in-out
+
+  .footer-link li:hover
+    opacity: .6
+
+  .footer-add-list li
+    display: inline-flex

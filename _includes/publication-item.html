@@ -1,0 +1,63 @@
+<!-- Publication card -->
+<div
+  class="publication-card-wrapper"
+  onclick="openModal('{{ post.title | slugify }}')">
+
+  <div class="publication-card">
+  <div
+    class="publication-img"
+    style="background-image: url('{{ site.baseurl }}/assets/img/publications/{{ post.thumbnail }}');">
+  </div>
+  <h4 class="publication-title">
+    {{ post.title }}
+  </h4>
+  </div>
+</div>
+
+<!-- Publication modal -->
+<div
+  id="pub-modal-{{ post.title | slugify  }}"
+  class="modal-window">
+
+  <div
+    onclick="closeModal('{{ post.title | slugify  }}')">
+
+    <div class="modal-content">
+      <ul class="modal-header">
+        <li>
+        <h4 class="modal-publication-title">
+        {{ post.title }}</h4>
+        </li><li>
+        <p class="display-mobile-only modal-close">
+        &times;</p>
+        </li><li>
+        <p class="display-desktop-only modal-close">close</p>
+      </li></ul>
+
+      <h5>{{ post.author }}</h5>
+
+      <h2 class="modal-abstract-title">Abstract</h2>
+
+      <div class="modal-content-scroll">
+        <p class="publication-abstract">
+          {{ post.abstract }}
+        </p>
+      </div>
+
+      <ul class="publication-details-list">
+      <li class="publication-detail">
+        Publisher:<strong>{{ post.publisher }}</strong>
+      </li>
+      <li class="publication-detail">
+        Date:<strong>{{ post.publication-date }}</strong>
+      </li>
+      <li class="publication-detail">
+        Category:<strong>{{ post.category }}</strong>
+      </li>
+      <li class="publication-detail">
+        doi:<a class="publication-link" href="{{ post.doi-url }}">{{ post.doi }}</a></li>
+      </ul>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+.privacy-wraper
+  margin: 20vh auto
+  max-width: 900px
+  display: grid
+  grid-template-columns: 60% 40%
+  grid-gap: 10px 40px
+
+.privacy-header
+  grid-column-start: 1
+  grid-column-end: 3
+
+.privacy-section
+  grid-column-start: 1
+  grid-column-end: 2
+
+.privacy-friendly
+  grid-column-start: 2
+  grid-column-end: 3
+  font-style: italic
+  margin-top: 4.23rem
+
+@media screen and ( max-width : 1024px )
+  .privacy-wraper
+    max-width: 700px
+
+@media screen and ( max-width : 768px )
+  .privacy-wraper
+    margin: 15vh 5vw
+    grid-template-columns: 100%
+  .privacy-header
+    grid-column-end: 2
+  .privacy-friendly
+    grid-column-start: 1
+    grid-column-end: 2
+    margin: 0
+    font-size: 0.8rem

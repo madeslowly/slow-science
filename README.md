@@ -85,7 +85,7 @@ Primary menu is placed the main navbar. Secondary menu items are included along 
 
 ```yaml
 - name: Made Slowly
-  pic: name of image file without extension
+  pic: name of image without extension
   position:
   social:
     - icon: fab fa-twitter
@@ -98,7 +98,7 @@ Primary menu is placed the main navbar. Secondary menu items are included along 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/madeslowly/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/madeslowly/. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 

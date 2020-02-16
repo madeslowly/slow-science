@@ -1,0 +1,63 @@
+$primary-font-family: 'Roboto Mono', monospace
+$secondary-font-family: 'Roboto', sans-serif
+$global-font-size: 16px
+$sm-global-font-size: 14px
+$global-letter-spacing: 1px
+
+$extra-light-font: 100
+$light-font: 300
+$medium-font: 500
+$heavy-font: 700
+$small-font: .8rem
+$normal-font: 1rem
+
+h1
+  font-size: 1.9rem
+  letter-spacing: 2px
+  line-height: 3rem
+  font-weight: $extra-light-font
+
+h2
+  font-size: 1.6rem
+
+h3
+  font-size: 1.3rem
+  //letter-spacing: 3px
+
+h4
+  font-size: 1rem
+  //font-weight: $heavy-font
+
+p,h2,h3,h5,h6
+  font-weight: $light-font
+
+p
+  line-height: 1.5rem
+
+.h1-light,
+.h2-light
+  color: $soft-white
+
+@media screen and ( min-width: 576px )
+  h1
+    font-size: 2.4rem
+    letter-spacing: 3px
+    line-height: 3rem
+
+  h3
+    font-size: 1.3rem
+    //letter-spacing: 3px
+  h4
+    font-size: 1rem
+    font-weight: $heavy-font
+
+@media screen and ( min-width: 768px )
+  h1
+    font-size: 3.2rem
+    letter-spacing: 3px
+    line-height: 4rem
+
+  h2,
+  h3,
+  h4
+    font-weight: $heavy-font

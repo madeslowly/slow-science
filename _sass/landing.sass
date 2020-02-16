@@ -1,0 +1,36 @@
+.landing-wraper
+  background-image: url( $baseurl + '/assets/img/content/header-bg-small.jpg' )
+  background-position: top
+  background-size: cover
+  height: 100vh
+  max-height: 100vh
+
+.landing-content
+  padding: 70vh 10vw 0 10vw
+
+.landing-title
+  color: $soft-white
+  text-align: center
+
+.landing-subtitle
+  display: none
+  color: $soft-white
+  font-weight: $light-font
+  letter-spacing: 4px
+  text-align: center
+
+@media screen and ( min-width : 376px )
+  .landing-wraper
+    background-image: url( $baseurl + '/assets/img/content/header-bg.jpg' )
+
+@media screen and ( min-width : 768px )
+  // display on ipad but not phone
+  .landing-title
+    text-align: left
+
+  .landing-subtitle
+    display: block
+    text-align: left
+
+  .landing-content
+    padding: 60vh 10vw 0 10vw

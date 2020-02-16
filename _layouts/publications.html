@@ -1,0 +1,30 @@
+---
+layout: default
+title: Open Positions
+---
+<!-- wrapping in section tag triggers safari reader icon -->
+<section>
+
+  <section class="spacer publications-wraper"></section>
+  <a name="publications"></a>
+  <!-- publications  -->
+  <section class="global-container publications-wraper">
+    <h1 class="center-header"
+    style="border-bottom: solid 1px black">Publications</h1>
+
+    <img class="publications-header-img" src="{{ site.baseurl }}/assets/img/publications/publications-header.jpg" class="publication-img" alt="">
+
+    {{ content }}
+
+    <div class="publications-panel">
+      {% for post in site.posts %}
+
+      {% include publication-item.html %}
+
+      {% endfor %}
+
+    </div>
+  </section>
+
+  <section class="spacer publications-wraper"></section>
+</section>

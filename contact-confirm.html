@@ -1,0 +1,27 @@
+---
+layout: default
+title: Message Sent
+permalink: /contact-confirm/
+---
+<section class="contact-masthead">
+  <h1 class="contact-header">{{ page.title }}</h1>
+
+</section>
+
+<div class="contact-wrapper global-container">
+
+  <div class="contact-grid">
+    <div class="contact-form">
+      <!--<h2>Success!</h2>-->
+      <p class="contact-confirm">Your message has been successfully sent to {{ site.email }}. You should receive an automated confirmation very soon followed by a personal response.</p>
+    </div>
+
+    {% include contact-footer.html %}
+
+    <div class="contact-details">
+      {% include contact-details.html %}
+    </div>
+
+  </div>
+
+</div>

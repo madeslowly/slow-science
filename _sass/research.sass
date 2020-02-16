@@ -1,0 +1,76 @@
+.research-wraper
+  background-image: url( $baseurl + '/assets/img/research/research-bg.svg')
+  background-position: bottom
+  background-size: cover
+
+.research-panel
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  overflow: hidden
+  padding: 5vh 0 0
+  width: 100%
+
+.research-blurb
+  text-align: left
+  width: 100%
+
+.research-topic
+  background-position: bottom
+  flex-basis: auto
+  flex-shrink: 0
+  margin: 0
+  overflow: hidden
+  padding: 0
+
+.research-topic-img
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  height: 40vh
+  transition: transform .8s ease-in-out
+
+  &:hover
+    transform: scale(1.1)
+
+.research-title
+  background-color: rgb(121, 121, 121)
+  border-right: solid $white 1px
+  color: $pure-white
+  display: block
+  margin: 0
+  padding: 0
+  position: relative
+  text-align: center
+  z-index: 100
+
+@media screen and ( min-width: 768px )
+
+  .research-panel
+    flex-direction: row
+
+  .research-strap
+    flex-basis: auto
+    padding: 5vh 0
+    text-align: center
+
+  .research-topic
+    flex-basis: 33.3%
+    width: 100%
+
+@media screen and ( min-width: 1024px )
+
+  .research-panel
+    padding: 10vh 0 0
+
+  .research-header
+    width: 40%
+
+  .research-blurb
+    width: 55%
+
+  .research-description
+    padding-right: 3rem
+
+  .research-topic-img
+    height: 30vw

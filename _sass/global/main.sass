@@ -1,0 +1,125 @@
+html
+  font-size: $global-font-size
+  scroll-behavior: smooth
+
+body
+  box-sizing: border-box
+  font-family: $primary-font-family
+  font-weight: $light-font
+  letter-spacing: $global-letter-spacing
+  margin: 0
+  overflow-x: hidden
+  padding: 0
+
+a
+  color: inherit
+  text-decoration: none
+
+  &:hover
+    text-decoration: none
+
+// defining z here just makes sure no funny bussiness happens with other layers showing up on top
+nav,
+footer
+  z-index: 1
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  padding: 0
+
+p
+  font-family: $secondary-font-family
+
+::placeholder
+  color: $black
+  font-family: $secondary-font-family
+
+button,
+.btn
+  // some 'buttons' are actually hyperlinks styled to look like buttons, for the purpose of readers. So we always class as .btn btn-*
+  border-radius: 5px
+  display: block
+  font-size: 1rem
+  font-weight: $heavy-font
+  letter-spacing: 1px
+  padding: 1rem 1.6rem
+  text-align: center
+  text-decoration: none
+  transition: .3s ease-in-out
+  white-space: nowrap
+  width: min-content
+
+button
+  cursor: pointer
+
+.btn-solid
+  border: 0
+
+.btn-outline
+  background-color: transparent
+  border: solid 1px
+
+.btn-yellow
+  background-color: $yellow
+  color: $blue
+
+.btn-pink
+  background-color: $vivid-red
+  color: $white
+
+.btn-white
+  background-color: $pure-white
+  color: $soft-black
+
+.global-container
+  margin: 0
+  padding: $container-margin-768
+
+.spacer
+  background-color: inherit
+  min-height: 5vh
+
+.center-header,
+.center-strap
+  text-align: center
+
+.center-header
+  margin: 0
+  padding: 0
+  text-transform: uppercase
+
+.display-desktop-only
+  display: none
+
+.display-mobile-only
+  display: inherit
+
+@media screen and ( min-width: 768px )
+
+  .display-mobile-only
+    display: none
+
+  .display-desktop-only
+    display: inherit
+
+  .btn-pop
+    &:hover
+      @include btn-animation
+      box-shadow: $box-shadow-hover
+
+  .btn-color-swoosh
+    &:hover
+      @include btn-animation
+      box-shadow: $box-shadow-hover
+
+@media screen and ( min-width: 1024px)
+  .global-container
+    padding: $container-margin-1024
+
+  .spacer
+    min-height: 10vh
