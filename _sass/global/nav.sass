@@ -14,10 +14,31 @@ nav
   width: 90%
   z-index: 9999
 
+.logo
+  transition: .7s ease-in-out
+
+.logo_primary
+  stroke-width: 2px
+  stroke: $logo_color	
+  fill: $logo_color
+  opacity: 1
+  transition: .7s ease-in-out
+
+.logo_secondary
+  opacity: 0
+  stroke: $white
+  transition: 1s ease-in-out
+
 .nav-scrolled
-  background-color: $blue
+  background-color: $theme_color
   box-shadow: 0 1px 4px rgba(0, 7, 64, .6)
   height: 10vh
+
+  .logo_primary
+    opacity: 0
+
+  .logo_secondary
+    opacity: 1
 
 .nav-links
   display: flex
@@ -36,9 +57,6 @@ nav
 .nav-brand
   width: 100px
 
-.logo
-  transition: .7s ease-in-out
-
 .nav-img
   transition: .7s ease-in-out
 
@@ -52,7 +70,7 @@ nav
 
     a
       &:hover
-        background-color: $vivid-red
+        background-color: $muted-red
         opacity: 1
 
 @media screen and ( max-width: 1024px )
@@ -60,14 +78,15 @@ nav
     background-color: rgba(0, 0, 0, .85)
     height: 10vh
 
-  .logo-text
+  .logo_desktop_only
     display: none
 
   .logo
     height: 10vh
 
-  .logo-bot
-    transform: translate(-60px, 25%)
+  .logo_secondary
+    opacity: 1
+    transform: translate(-10px, 10px) scale(0.7)
     z-index: 100
 
   .nav-links
