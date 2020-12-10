@@ -1,8 +1,13 @@
 # coding: utf-8
 # frozen_string_literal: true
+# mygem.gemspec
+
+require_relative "version.rb"
 
 Gem::Specification.new do |spec|
+
   spec.name          = 'slow-science'
+  spec.version       = Mygem::VERSION
   spec.authors       = ['Arran Curran']
   spec.email         = ['arran@madeslowly.co.uk']
 
