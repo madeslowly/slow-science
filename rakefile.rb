@@ -1,1 +1,1 @@
-require 'rake/release'
+require_relative 'rake/release'
