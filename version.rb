@@ -1,4 +1,4 @@
 # lib/mygem/version.rb
 module Mygem
-  VERSION = "0.0.16"
+  VERSION = "0.0.17"
 end
