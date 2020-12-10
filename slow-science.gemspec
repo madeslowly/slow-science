@@ -3,7 +3,6 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'slow-science'
-  spec.version       = '0.1.0'
   spec.authors       = ['Arran Curran']
   spec.email         = ['arran@madeslowly.co.uk']
 
