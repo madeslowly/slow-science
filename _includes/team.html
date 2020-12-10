@@ -1,23 +1,24 @@
 <!-- Team Section -->
 <section class="global-container team-container">
-  <h1 class="center-header">Our Team</h1>
-  <div class="team-panel">
-    {% for item in site.data.team %}
-    <div class="team-member" data-aos="fade-in">
-      <img src="{{ site.baseurl }}/assets/img/team/{{ item.pic }}.jpg" class="team-member-img" alt="">
-      <h3 class="team-name">{{ item.name }}</h3>
-      <p class="team-position">{{ item.position }}</p>
-      <ul class="team-contacts">
-        {% for network in item.social %}
-        <li>
-          <a href="{{ network.url }}">
-            <i class="{{ network.icon }} fa-2x"></i>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
+  {% for item in site.data.team.teams %}
+  <h1 class="center-header">{{ item.title }}</h1>
+    <div class="team-panel">
+      {% for entry in item.members %}
+      <div class="team-member" data-aos="fade-in">
+        <img src="{{ site.baseurl }}/assets/img/team/{{ entry.pic }}.jpg" class="team-member-img" alt="">
+        <h3 class="team-name">{{ entry.name }}</h3>
+        <p class="team-position">{{ entry.position }}</p>
+        <ul class="team-contacts">
+          {% for network in entry.social %}
+          <li>
+            <a href="{{ network.url }}">
+              <i class="{{ network.icon }} fa-2x"></i>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
     </div>
     {% endfor %}
-  </div>
-
 </section>

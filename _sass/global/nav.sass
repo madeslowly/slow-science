@@ -18,23 +18,31 @@ nav
   transition: .7s ease-in-out
 
 .logo_primary
-  stroke-width: 2px
-  stroke: $logo_color	
+  stroke-width: 3px
+  stroke: $logo_color
   fill: $logo_color
+
+.logo_text
+  fill: $logo_color_text
+  opacity: 1
+
+.logo_primary, .logo_text
   opacity: 1
   transition: .7s ease-in-out
 
 .logo_secondary
   opacity: 0
-  stroke: $white
   transition: 1s ease-in-out
+  stroke: #282727
+  fill: $theme_color
+
 
 .nav-scrolled
   background-color: $theme_color
   box-shadow: 0 1px 4px rgba(0, 7, 64, .6)
   height: 10vh
 
-  .logo_primary
+  .logo_primary, .logo_text
     opacity: 0
 
   .logo_secondary
@@ -86,8 +94,9 @@ nav
 
   .logo_secondary
     opacity: 1
-    transform: translate(-10px, 10px) scale(0.7)
+    transform: matrix(1.3, 0, 0, 1.3, -20, -20)
     z-index: 100
+    stroke: $soft-white
 
   .nav-links
     align-self: baseline

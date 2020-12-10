@@ -2,12 +2,12 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = 'slow_science'
+  spec.name          = 'slow-science'
   spec.version       = '0.1.0'
   spec.authors       = ['Arran Curran']
   spec.email         = ['arran@madeslowly.co.uk']
 
-  spec.summary       = %q{A flexible two-column Jekyll theme.}
+  spec.summary       = %q{Jekyll theme designed for scientists, by a scientist.}
   spec.homepage      = 'https://github.com/madeslowly/slow-science'
   spec.license       = 'MIT'
 
