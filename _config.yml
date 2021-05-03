@@ -1,0 +1,48 @@
+################################################################################
+#
+# Configuration for Slow Steps theme with /gaitq-content/
+#
+#################################################################################
+
+# Site developer
+developer:
+  name:                    Made Slowly
+  email:                   arran@madeslowly.co.uk
+  url:                     https://www.madeslowly.co.uk/
+  twitter:                 made_slowly
+  description:             >-
+
+      Made Slowly is the creation of Arran Curran, a freelance developer based in Oxford. I have been developing digital solutions in a variety of enviroments for over 20 years. With my wide range of experience I can deliver an all-in-one solution, so your new website will be smarter and faster all whilst looking awesome (the website, not me). Get in touch and find out how I can help you.
+
+#
+# ### Build Settings ###
+#
+
+markdown:                  kramdown
+highlighter:               rouge
+kramdown:
+  input:                   GFM
+  syntax_highlighter_opts:
+    default_lang:          html
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-autoprefixer
+  - jekyll-sitemap
+  - jekyll-target-blank
+
+sass:
+  style:                   compressed
+  load_paths:
+    - _sass
+
+compress_html:
+  ignore:
+    envs: local
+  comments:                all
+
+autoprefixer:
+  only_production:         true
+  browsers:
+    - cover 99.5%

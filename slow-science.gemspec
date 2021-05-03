@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'jekyll', '~> 4.0'
 
-  spec.add_runtime_dependency 'jekyll-feed', '~> 0.13.0'
+  spec.add_runtime_dependency 'jekyll-feed', '~> 0.15.0'
   spec.add_runtime_dependency 'jekyll-paginate', '~> 1.1.0'
   spec.add_runtime_dependency 'jekyll-autoprefixer', '~> 1.0.2'
   spec.add_runtime_dependency 'jekyll-sitemap', '~> 1.4.0'
