@@ -1,0 +1,29 @@
+os: linux
+arch: arm64-graviton2
+group: edge
+
+language: ruby
+cache: bundler
+gemfile: Gemfile
+branches:
+  only:
+  - master
+
+rvm:
+- 2.6
+
+notifications:
+  email:
+    recipients:
+    - arran@madeslowly.co.uk
+    on_success: always
+    on_failure: always
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - gem bump --file version.rb
+    - rake release
+  on:
+    all_branches: true
